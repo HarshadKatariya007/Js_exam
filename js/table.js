@@ -32,7 +32,8 @@ const Table_UI = () =>
       delete_1.style.cursor="pointer";     
        delete_1.addEventListener("click",(e)=>
     {
-        e.target.parentNode.remove();
+       Arry.splice(i,1)
+        Table_UI()
     })
       table.append(data_1,data_2,data_3,data_4,data_5,data_6,delete_1)
       document.querySelector("#data_table").append(table)
@@ -67,6 +68,7 @@ const Table_Data = (e) =>
 const delete_all=()=>
 {
     document.querySelector("#data_table").innerHTML="";
+   Arry = []
 }
 
 document.querySelector("#table_data_store").addEventListener("submit",Table_Data)
